@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+
+	<title>Ticky clock</title>
+
+	<!--  -->
+
+	<style>
+
+	</style>
+
+</head>
+
+<body id="abc">
+
+	<div id="clk">
+	
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script>
+        var d,h ,m ,s,colr,clock;
+
+function c(){
+    d= new Date();
+h=d.getHours();
+m=d.getMinutes();
+s=d.getSeconds();
+colr="#"+h+m+s;
+
+    if(h<=9)
+        h="0"+h;
+    
+    if(m<=9)
+        m="0"+m;
+    
+    if(s<=9)
+        s="0"+s;
+    document.getElementById("clk").innerHTML=h+":"+m+":"+s;
+    document.body.style.backgroundColor=colr;
+    setTimeout(c,1000);
+ 
+}
+c();
+	</script>
+
+</body>
+
+</html>
